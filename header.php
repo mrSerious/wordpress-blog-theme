@@ -26,7 +26,6 @@
 	<?php wp_body_open(); ?>
 	<div id="page" class="site">
 		<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'awordpressblogtheme'); ?></a>
-
 		<header id="masthead" class="site-header">
 			<nav class="navbar navbar-expand-lg">
 				<div class='container'>
@@ -35,24 +34,28 @@
 						the_custom_logo();
 						if (is_front_page() && is_home()) :
 						?>
-							<h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></h1>
-							<a class="navbar-brand" href="#">Navbar</a>
+							<a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
+								<img src="/openfileblog/wp-content/themes/awordpressblogtheme/assets/images/theblog.png" class="img-fluid site-logo">
+							</a>
 						<?php
 						else :
 						?>
-							<a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a>
-							<!-- <a class="navbar-brand" href="#">Navbar</a> -->
+						<a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
+							<img src="/openfileblog/wp-content/themes/awordpressblogtheme/assets/images/theblog.png" class="img-fluid site-logo">
+						</a>
 						<?php
 						endif;
-						// $awordpressblogtheme_description = get_bloginfo('description', 'display');
 						if ($awordpressblogtheme_description || is_customize_preview()) :
 						?>
-							<p class="site-description"><?php echo $awordpressblogtheme_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped 
-																					?></p>
+							<p class="site-description">
+								<?php
+								echo $awordpressblogtheme_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped 
+								?>
+							</p>
 						<?php endif; ?>
 					</div><!-- .site-branding -->
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-navbar-collapse-1" aria-controls="bs-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
-						<span class="navbar-toggler-icon"></span>
+						<img src="/openfileblog/wp-content/themes/awordpressblogtheme/assets/images/menu.png" class="navbar-toggler-icon">
 					</button>
 					<?php
 					wp_nav_menu(array(
