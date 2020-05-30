@@ -26,12 +26,12 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
+# Global
 # Typography
 # Elements
 # Forms
 # Navigation
-	## Links
-	## Menus
+# Footer
 # Accessibility
 # Alignments
 # Widgets
@@ -45,10 +45,39 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
-# Common
+# Global
 --------------------------------------------------------------*/
 body {
-	font: 300 1rem/2 Poppins, sans-serif;
+	font: 300 15px/2 Poppins, sans-serif;
+	color: #555555;
+}
+
+#page {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+#site-main-wrapper .row {
+	margin: 5% 0;
+}
+
+#site-main-wrapper {
+	flex: 1;
+}
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: bold;
+	margin-bottom: 12px;
+	color: #000;
 }
 
 /*--------------------------------------------------------------
@@ -84,11 +113,51 @@ body {
 	}
 }
 
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
 .site-footer {
-	background: #16171b;
-	color: #808080;
 	text-align: center;
-	padding: 2%;
+}
+
+.site-footer .site-info .footer-pre {
+	background-color: #f8f8f8;
+	padding: 5% 0;
+}
+
+.site-footer .social-links .list-inline-item {
+	background-color: #e8e8e8;
+	border-radius: 50px;
+	color: #77838f;
+	cursor: pointer;
+	font-size: 20px;
+	height: 40px;
+	width: 40px;
+	transition: all ease-in 0.5s;
+}
+
+.site-footer .social-links .list-inline-item:not(:last-child) {
+	margin-right: 1rem;
+}
+
+.site-footer .social-links .list-inline-item:hover {
+	background-color: #007bff23;
+	color: #007aff;
+}
+
+.site-footer .nav-link:hover {
+	color: #007aff;
+}
+
+.site-footer .rights {
+	background-color: #fff;
+	color: #77838f;
+	font-size: 14px;
+	padding: 20px;
+}
+
+.site-footer .nav-link {
+	color: #77838f;
 }
 
 .admin-bar .fixed-top {
@@ -98,6 +167,13 @@ body {
 @media screen and (min-width: 782px) {
 	.admin-bar .fixed-top {
 		top: 32px;
+	}
+}
+
+@media screen and (max-width: 426px) {
+	.site-footer .nav-link {
+		font-size: 12px;
+		padding: 0.5rem;
 	}
 }
 

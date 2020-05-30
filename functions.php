@@ -56,6 +56,11 @@ if (!function_exists('awordpressblogtheme_setup')) :
 			)
 		);
 
+		register_nav_menus(
+			array(
+				'menu-2' => esc_html__('Footer', 'awordpressblogtheme'),
+			)
+		);
 		/*
 		 * Switch default core markup for search form, comment form, and comments
 		 * to output valid HTML5.

@@ -40,9 +40,9 @@
 						<?php
 						else :
 						?>
-						<a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
-							<img src="/openfileblog/wp-content/themes/awordpressblogtheme/assets/images/theblog.png" class="img-fluid site-logo">
-						</a>
+							<a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
+								<img src="/openfileblog/wp-content/themes/awordpressblogtheme/assets/images/theblog.png" class="img-fluid site-logo">
+							</a>
 						<?php
 						endif;
 						if ($awordpressblogtheme_description || is_customize_preview()) :
