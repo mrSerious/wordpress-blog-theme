@@ -12,17 +12,17 @@ get_header();
 
 <div id="site-main-wrapper" class="container">
 <div class="row">
-	<main id="primary" class="site-main col-sm-12 col-md-9">
+	<main id="primary" class="site-main col-sm-12 col-md-8">
 
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
-				<h1 class="page-title">
+				<h4 class="page-title">
 					<?php
 					/* translators: %s: search query. */
 					printf( esc_html__( 'Search Results for: %s', 'awordpressblogtheme' ), '<span>' . get_search_query() . '</span>' );
 					?>
-				</h1>
+				</h4>
 			</header><!-- .page-header -->
 
 			<?php
